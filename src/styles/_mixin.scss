@@ -1,0 +1,23 @@
+
+
+@mixin desc {
+    h3 {
+        font-family: 'Nunito sans',sans-serif;
+        font-size: 2.5rem;
+        color: $very-dark-blue-text;
+        line-height: 5rem;
+        margin: 1rem 0;
+    }
+
+    p {
+        font-size: 1.4rem;
+        margin: 1rem 0;
+        color: $very-dark-blue-bg-dark;
+        font-weight: 600;
+        text-transform: capitalize;
+        span {
+            text-transform: capitalize;
+            opacity: .7;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import '../../styles/colors';
+
+.single-nation {
+    box-shadow: $box-shadow;
+    min-height: 25rem;
+
+    img {
+        //    object-fit: contain;
+        //    object-position: 0% 0%;
+        //    position: relative;
+        width: 100%;
+    }
+
+    .desc {
+        padding: 0rem 3rem 4rem;
+        flex: 1 1 60%;
+
+        h3 {
+            font-family: 'Nunito sans',sans-serif;
+            font-size: 2.5rem;
+            color: $very-dark-blue-text;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: $very-dark-blue-bg-dark;
+            font-weight: 600;
+            text-transform: capitalize;
+            span {
+                text-transform: capitalize;
+                opacity: .7;
+            }
+        }
+    }
+}

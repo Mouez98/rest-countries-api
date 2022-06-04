@@ -1,0 +1,32 @@
+
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.center-flex {
+ justify-content: center;
+ align-items: center; 
+}
+.left-flex {
+ justify-content: flex-start;
+ align-items: flex-start; 
+}
+
+.space-between {
+  justify-content: space-between;
+}
+.column {
+  flex-direction: column;
+}
+.grid-home {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(25rem, 1fr));
+  gap: 3rem;
+}
