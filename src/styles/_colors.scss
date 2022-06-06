@@ -1,6 +1,7 @@
 //main colors
 
 $very-dark-blue-text: hsl(200, 15%, 8%);
+$very-dark-blue-text-secodary : hsl(200, 15%, 8%);
 $dark-gray-input: hsl(0, 0%, 52%);
 $very-light-gray-bg: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
@@ -11,7 +12,11 @@ $dark-blue-elements-dark: hsl(209, 23%, 22%);
 $very-dark-blue-bg-dark: hsl(207, 26%, 17%);
 
 //Box shadow
-$box-shadow: 0px 0px 7px 1px #bdbdbd7a;
+$box-shadow: 0px 0px 7px 1px rgb(0 0 0/ 30%);
+
+//Border radius
+$border-raduis: .4rem;
+
 // - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
 // - Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
 // - Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)

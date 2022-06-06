@@ -1,18 +1,14 @@
-import './Home.scss'
-import SingleNation from '../singleNation/Single'
+import Container from "../ui/Container";
+import SearchContainer from "../searchContainer/Search";
+import Countries from "../countries/countries";
 
+const Home = () => (
+  <>
+    <Container>
+      <SearchContainer />
+      <Countries />
+    </Container>
+  </>
+);
 
-const Home = () => {
-   return(<section className='home grid-home'>
-       <SingleNation />
-       <SingleNation />
-       <SingleNation />
-       <SingleNation />
-       <SingleNation />
-       <SingleNation />
-       <SingleNation />
-       <SingleNation />
-   </section>)
-}
-
-export default Home
+export default Home;

@@ -1,4 +1,14 @@
+@import '../../styles/colors';
+
 .btn {
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
     background: transparent;
+    box-shadow: $box-shadow;
+    border: none;
+    text-transform: capitalize;
+    gap: 1rem;
+    border-radius: $border-raduis;
+    color: $very-dark-blue-text-secodary;
+    transition: transform .3s ease;
+    cursor: pointer;
 }

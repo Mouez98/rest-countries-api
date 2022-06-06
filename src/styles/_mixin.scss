@@ -3,21 +3,41 @@
 @mixin desc {
     h3 {
         font-family: 'Nunito sans',sans-serif;
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         color: $very-dark-blue-text;
         line-height: 5rem;
-        margin: 1rem 0;
+        font-weight: 800;
+        margin-bottom: 1rem;
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         margin: 1rem 0;
-        color: $very-dark-blue-bg-dark;
-        font-weight: 600;
+        color: $very-dark-blue-text;
+        font-weight: 800;
         text-transform: capitalize;
         span {
             text-transform: capitalize;
-            opacity: .7;
+            font-weight: 600;
+            margin-left: .2rem;
+            color: $very-dark-blue-text-secodary;
+        }
+    }
+}
+
+@mixin breakPoint($point) {
+    @if $point == 'mobile' {
+        @media (max-width: 600px) {
+            @content;
+        }
+    } @else if $point == 'small' {
+        @media (min-width: 601px) and (max-width: 920px) {
+            @content;
+        }
+    }
+     @else if $point == 'medium' {
+        @media (min-width: 921px) and (max-width: 1300px) {
+            @content;
         }
     }
 }

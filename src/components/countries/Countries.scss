@@ -1,0 +1,17 @@
+@import '../../styles/colors';
+@import '../../styles/mixin';
+
+
+.countries {
+  background-color: $very-light-gray-bg;
+}
+
+.dark .countries{
+  background-color: $very-dark-blue-bg-dark
+}
+
+@include breakPoint(mobile) {
+  .countries {
+    grid-template-columns: 1fr;
+  }
+}

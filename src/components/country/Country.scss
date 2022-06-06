@@ -1,13 +1,10 @@
 @import '../../styles/colors';
 
-.single-nation {
+.country {
     box-shadow: $box-shadow;
     min-height: 25rem;
-
+    border-radius: $border-raduis;
     img {
-        //    object-fit: contain;
-        //    object-position: 0% 0%;
-        //    position: relative;
         width: 100%;
     }
 

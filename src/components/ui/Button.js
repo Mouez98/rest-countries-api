@@ -1,7 +1,7 @@
 import './Button.scss'
 
 const Button = ({children}) => (
-   <button className='btn'>
+   <button className='btn flex center-flex'>
        {children}
    </button>
 )
