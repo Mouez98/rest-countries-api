@@ -3,26 +3,14 @@ import Button from "../ui/Button";
 import Container from "../ui/Container";
 import flag from "../../assets/germany-flag-48866.png";
 import "./CountryDetails.scss";
-import { useEffect, useState } from "react";
+import useFetch from "../../hooks/use-fetch";
 
 const CountryDetails = () => {
-  const[data,setData] = useState()
-  const fetchData = async () => {
-    const response = await fetch('https://restcountries.com/v3.1/name/peru')
-    const data = await response.json()
-    return data
-  }
+  //  const {data,isLoading,error} = useFetch('https://restcountries.com/v3.1/name/germany');
 
-  // useEffect(()=> {
-  //   try {
-  //     fetchData()
-  //     setData(fetchData)
-  //   }
-  //   catch {
-  //     console.log('error');
-  //   }
-  //   console.log(data);
-  // },[data])
+  //  const fetchedData = [...data];
+  //  console.log(fetchedData);
+  
   return (
     <Container>
       <Button>

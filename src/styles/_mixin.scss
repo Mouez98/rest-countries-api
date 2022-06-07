@@ -1,4 +1,4 @@
-
+@import './colors';
 
 @mixin desc {
     h3 {
@@ -12,10 +12,12 @@
 
     p {
         font-size: 1.3rem;
-        margin: 1rem 0;
+        margin: .5rem 0;
         color: $very-dark-blue-text;
         font-weight: 800;
-        text-transform: capitalize;
+        &::first-letter {
+            text-transform: capitalize;
+        }
         span {
             text-transform: capitalize;
             font-weight: 600;

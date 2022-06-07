@@ -1,0 +1,22 @@
+@import '../../styles/mixin';
+
+.error {
+    .container {
+        align-items: center;
+        gap: 3rem;
+    }
+    .svgContainer {
+        width: 50%;
+        height: auto
+        img {
+            width: 100%;
+        }
+    }
+   .textContainer {
+       @include desc;
+       p {
+           font-weight: 600;
+           margin: 2rem 0;
+       }
+   }
+}

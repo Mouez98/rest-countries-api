@@ -9,7 +9,7 @@ const SearchContainer = () => {
         <label htmlFor="search">
           <AiOutlineSearch />
         </label>
-        <input type="text" placeholder="search a country" name="search" />
+        <input type="text" placeholder="Search for a country" name="search" />
       </div>
 
       <select name="select">

@@ -22,11 +22,21 @@
             font-size: 1.4rem;
             color: $very-dark-blue-bg-dark;
             font-weight: 600;
+            margin: .5rem 0;
             text-transform: capitalize;
             span {
                 text-transform: capitalize;
                 opacity: .7;
             }
         }
+    }
+}
+
+.dark .country {
+    background-color: $dark-blue-elements-dark;
+    color: $white;
+
+   .desc h3,p {
+        color: $white;
     }
 }

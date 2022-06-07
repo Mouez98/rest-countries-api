@@ -4,7 +4,7 @@
 
 .searchContainer {
     margin: 2.5rem 0;
-    .input{
+    .input{ 
         position: relative;
         font-size: 1.6rem;
         color: $dark-gray-input;
@@ -16,20 +16,26 @@
             margin: 0 .5rem;
         }
         input[type=text] {
+            background-color: transparent;
             padding: 1.5rem 2rem 1.5rem 5rem;
-            box-shadow: 0px 0px 7px 1px #bdbdbd7a;
-            color: $dark-gray-input;
+            box-shadow: $box-shadow;
+           
             border: none;
             width: 40rem;
             height: 5rem;
             outline: none;
             border-radius: $border-raduis;
+            &::placeholder {
+                color: $dark-gray-input;
+                font-family: inherit;
+            }
         }
 
     }
     
     select {
         padding: 1.5rem 1rem;
+        background-color: transparent;
         border: none;
         box-shadow: $box-shadow;
         height: 5rem;
@@ -41,6 +47,14 @@
             padding: 1rem 1.5rem;
         }
     }
+}
+
+.dark .searchContainer {
+   
+    input[type=text]::placeholder , select, .input {
+        color: $white;
+    }
+
 }
 
 @include breakPoint(mobile) {

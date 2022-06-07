@@ -5,14 +5,18 @@ import { MdOutlineDarkMode } from "react-icons/md";
 const Header = () => {
 
   const toggleThemeHandler = () => {
-     const root = document.getElementById('root')
+     const body = document.body;
+     if(body.classList.contains('dark')){
+       body.classList.remove('dark')
+     } else {
+       body.classList = 'dark'
+     }
      
-     root.classList = 'dark'
-     console.log(root);
+     console.log(body);
   }
   return (
     <header className="header ">
-      <Container className={"flex space-between center-flex"}>
+      <Container className="flex space-between center-flex">
         <h2>Where in the world</h2>
         <div className="toggle-theme flex" onClick={toggleThemeHandler}>
           <MdOutlineDarkMode />

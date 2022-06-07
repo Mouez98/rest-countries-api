@@ -5,13 +5,13 @@
     background-color: $white;
     color: $very-dark-blue-text;
     padding: 2rem 0;
-    box-shadow: -2px -9px 20px 0px $dark-gray-input;
+    box-shadow: $box-shadow;
     width: 100%;
     font-size: 1.6rem;
     margin-bottom: 4rem;
 
     h2 {
-        color: $very-dark-blue-text;
+        color: inherit;
     }
 
     .toggle-theme {
@@ -28,6 +28,11 @@
         }
     }
 
+}
+
+.dark .header {
+    background-color: $dark-blue-elements-dark;
+    color: $white;
 }
 
 

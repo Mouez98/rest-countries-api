@@ -3,12 +3,9 @@
 
 
 .countries {
-  background-color: $very-light-gray-bg;
+  // background-color: transparent;
 }
 
-.dark .countries{
-  background-color: $very-dark-blue-bg-dark
-}
 
 @include breakPoint(mobile) {
   .countries {
