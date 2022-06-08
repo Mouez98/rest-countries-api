@@ -3,46 +3,61 @@ import Button from "../ui/Button";
 import Container from "../ui/Container";
 import flag from "../../assets/germany-flag-48866.png";
 import "./CountryDetails.scss";
+import { useNavigate, useLocation } from "react-router-dom";
 import useFetch from "../../hooks/use-fetch";
+import { useEffect, useState } from "react";
 
 const CountryDetails = () => {
-  //  const {data,isLoading,error} = useFetch('https://restcountries.com/v3.1/name/germany');
+  const [fetchedData, setFetchedData] = useState({})
+  const navigate = useNavigate(),
+   navigateBackHandler = () => {
+    navigate("/");
+  },
+  location = useLocation();
 
-  //  const fetchedData = [...data];
-  //  console.log(fetchedData);
+  const countryName = location.pathname.slice(1)
+
+  const {data,isLoading,error} = useFetch('https://restcountries.com/v2/name/'+countryName);
   
+  const { name,nativeName,flag,population,capital,region } = fetchedData
+  useEffect(()=> {
+  setFetchedData(data[0])
+  },[data])
+
+
+
   return (
     <Container>
-      <Button>
+      <Button onClick={navigateBackHandler}>
         <BsArrowLeft /> <span>back</span>
       </Button>
-      <article className="full flex">
+      {data[0] && <article className="full flex">
         <div className="img-container">
           <img src={flag} alt="flag" />
         </div>
         <div className="desc">
           <div className="flex">
             <div className="partOne">
-              <h3>Germany</h3>
+              <h3>{name}</h3>
               <p>
-                Native name: <span>Belgie</span>
+                Native name: <span>{nativeName}</span>
               </p>
               <p>
-                population: <span>88,177,900</span>
+                population: <span>{population}</span>
               </p>
               <p>
-                capital: <span>berlin</span>
+                capital: <span>{capital}</span>
               </p>
               <p>
-                region: <span>europe</span>
+                region: <span>{region}</span>
               </p>
               <p>
-                subregion: <span>western europe</span>
+                {/* subregion: <span>{subregion}</span> */}
               </p>
             </div>
             <div className="partTwo ">
               <p>
-                Top level domain: <span>.be</span>
+                Top level domain: <span></span>
               </p>
               <p>
                 currency: <span>euro</span>
@@ -55,13 +70,21 @@ const CountryDetails = () => {
           <div className="border-contries">
             <p>Border contries:</p>
             <ul>
-              <li><Button>Nerthlands</Button></li>
-              <li><Button>United Kingdom</Button></li>
-              <li><Button>France</Button></li>
+              <li>
+                <Button>Nerthlands</Button>
+              </li>
+              <li>
+                <Button>United Kingdom</Button>
+              </li>
+              <li>
+                <Button>France</Button>
+              </li>
             </ul>
           </div>
         </div>
       </article>
+      }
+      
     </Container>
   );
 };

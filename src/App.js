@@ -2,17 +2,18 @@ import { Routes, Route } from "react-router-dom";
 import "./App.scss";
 import CountryDetails from "./components/country/CountryDetails";
 import Home from "./components/home/Home";
-import Layout from "./components/layout/Layout";
+import ErrorPage from './components/error/ErrorPage';
+import Header from "./components/navbar/Header";
 
 function App() {
   return (
    <>
+      <Header />
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />}>
-        </Route>
-          <Route path=":details" element={<CountryDetails />} />
+      <Route path="/" element={<Home />}>
       </Route>
+          <Route path=":details" element={<CountryDetails />} />
+          <Route path='*' element={<ErrorPage />} />
     </Routes>
    </>
    

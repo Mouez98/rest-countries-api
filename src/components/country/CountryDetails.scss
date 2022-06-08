@@ -6,6 +6,7 @@
     .img-container {
         width: 40%;
         position: relative;
+
         img {
             width: 100%;
             position: absolute;
@@ -15,37 +16,57 @@
     }
 
     .desc {
-       margin: 2rem ;
-       flex-grow: 1;
+        margin: 2rem;
+        flex-grow: 1;
+
         .partOne {
-           @include desc;
+            @include desc;
 
         }
+
         .partTwo {
             @include desc;
             margin: 5rem 4rem 0;
         }
+
         .border-contries {
-              margin: 2rem 0;
-              display: flex;
-              align-items: center;
-              @include desc;
-            //   p {
-            //       flex-basis: 15rem;
-            //   }
-              ul {
-                  display: flex;
-                  flex-wrap: wrap;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            @include desc;
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
                 //   width: 100%;
-                  flex-basis: calc(100% - 15rem);
-                  li {
-                  margin: 0 1rem;
-                  .btn {
-                    padding: 0.5rem 2rem;
-                  }
-              }
-              }
-              
+                flex-basis: calc(100% - 15rem);
+
+                li {
+                    margin: .6rem 1rem;
+
+                    .btn {
+                        padding: 0.5rem 2rem;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.dark .full {
+    .desc .partOne ,
+    .desc .partTwo,
+    .border-contries {
+        h3 {
+            color: $white;
+        }
+        p {
+            color: $white;
+            span {
+                color: $dark-gray-input;
+                // opacity: .7;
+            }
         }
     }
 }
@@ -59,6 +80,7 @@
             height: 20rem;
             position: relative;
             overflow: hidden;
+
             img {
                 width: 100%;
                 position: absolute;
@@ -66,40 +88,47 @@
                 left: 0;
             }
         }
-    
+
         .desc {
-           margin: 2rem ;
-           flex-grow: 1;
-           > div {
-              flex-direction: column
-           }
+            margin: 2rem;
+            flex-grow: 1;
+
+            >div {
+                flex-direction: column
+            }
+
             .partTwo {
                 @include desc;
                 margin: 2rem 0;
             }
+
             .border-contries {
-               
-                  margin: 2rem 0;
-                  display: flex;
-                  align-items: center;
-                  @include desc;
-                  p {
-                      display: block;
-                      margin-right: auto;
-                  }
-                  ul {
-                      display: flex;
-                      flex-wrap: wrap;
+
+                margin: 2rem 0;
+                display: flex;
+                align-items: center;
+                @include desc;
+
+                p {
+                    display: block;
+                    margin-right: auto;
+                }
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
                     //   width: 100%;
-                      flex-basis: calc(100% - 15rem);
-                      li {
-                      margin: .5rem .5rem .5rem 0;
-                      .btn {
-                        padding: 0.5rem 2rem;
-                      }
-                  }
-                  }
-                  
+                    flex-basis: calc(100% - 15rem);
+
+                    li {
+                        margin: .5rem .5rem .5rem 0;
+
+                        .btn {
+                            padding: 0.5rem 2rem;
+                        }
+                    }
+                }
+
             }
         }
     }

@@ -4,8 +4,15 @@
     box-shadow: $box-shadow;
     min-height: 25rem;
     border-radius: $border-raduis;
+    transition: transform .3s ease-out;
+    // transform-style: preserve-3d;
+    // transform: translateZ(50px);
+    &:hover {
+        transform: perspective(50rem) translateZ(3rem);
+    }
     img {
         width: 100%;
+        
     }
 
     .desc {

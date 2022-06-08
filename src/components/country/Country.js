@@ -1,24 +1,27 @@
 import "./Country.scss";
 
-import flag from "../../assets/germany-flag-48866.png";
+// import flag from "../../assets/germany-flag-48866.png";
+import { Link } from "react-router-dom";
 
-const Country = () => {
+const Country = ({name,population,region, capital,flag}) => {
   return (
+    <Link to={`/${name}`}>
       <article className="country flex column">
         <img src={flag} alt="flag" />
         <div className="desc flex column left-flex">
-          <h3>Germany</h3>
+          <h3>{name}</h3>
           <p>
-            population: <span>88,177,900</span>
+            population: <span>{population}</span>
           </p>
           <p>
-            region: <span>europe</span>
+            region: <span>{region}</span>
           </p>
           <p>
-            capital: <span>berlin</span>
+            capital: <span>{capital}</span>
           </p>
         </div>
       </article>
+    </Link>
   );
 };
 

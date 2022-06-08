@@ -1,7 +1,7 @@
 import './Button.scss'
 
-const Button = ({children}) => (
-   <button className='btn flex center-flex'>
+const Button = ({children, onClick}) => (
+   <button className='btn flex center-flex' onClick={onClick}>
        {children}
    </button>
 )

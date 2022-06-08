@@ -12,3 +12,6 @@
     transition: transform .3s ease;
     cursor: pointer;
 }
+.dark .btn {
+    color: $white;
+}
