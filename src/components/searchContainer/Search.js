@@ -35,7 +35,8 @@ const SearchContainer = ({ searchHandler, data, regionHandler }) => {
       </div>
 
       <select name="select" onChange={selectedRegionHandler}>
-        <option defaultValue="Select region">Select region</option>
+        <option value="none" defaultValue hidden>Filter by region</option>
+        <option value="all" >All regions</option>
         {regions.map((region) => (
           <option key={region} value={region} >
             {region}

@@ -4,11 +4,6 @@
 
 .countries {
   // background-color: transparent;
+  transition: all .3s ease;
 }
 
-
-@include breakPoint(mobile) {
-  .countries {
-    grid-template-columns: 1fr;
-  }
-}

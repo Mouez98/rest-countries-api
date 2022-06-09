@@ -18,13 +18,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   transition: background-color .3s linear;
-  &.dark {
-    background-color: $very-dark-blue-bg-dark;
-  }
-  &.light {
-    background-color: $very-light-gray-bg;
-  }
+  background-color: $very-light-gray-bg;
+
 }
+
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     background-color: $very-dark-blue-bg-dark;
+//   }
+
+// }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

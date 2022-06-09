@@ -10,9 +10,8 @@ import ErrorPage from "../error/ErrorPage";
 const Home = () => {
   const [fetchedData, setFetchedData] = useState([]);
 
-  const { data, isLoading, error } = useFetch(
-    "https://restcountries.com/v2/all"
-  );
+  const { data, isLoading, error } = useFetch("https://restcountries.com/v2/all");
+
 
   const countrySearchHandler = (key) => {
     if (key.trim().length > 0) {
@@ -20,21 +19,22 @@ const Home = () => {
         country.name.toUpperCase().includes(key.toUpperCase())
       );
       setFetchedData(filtredData);
-      console.log(filtredData);
     } else {
       setFetchedData(data);
     }
-    console.log(key);
   };
 
+
   const filterRegionsHandler = (region) => {
-    if(region === 'select region') {
-      setFetchedData(data)
-    }
-    const filtredData = data.filter((country) =>
+    if (region === "all") {
+      setFetchedData(data);
+    } else {
+       const filtredData = data.filter((country) =>
       country.region.toUpperCase().includes(region.toUpperCase())
     );
     setFetchedData(filtredData);
+    }
+   
   };
 
   useEffect(() => {

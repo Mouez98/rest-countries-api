@@ -2,22 +2,24 @@
 @import '../../styles/colors';
 
 .full {
-
+    margin-top: 4rem ;
     .img-container {
-        width: 40%;
+        flex-basis: 50%;
         position: relative;
+        max-height: 31.3rem;
+       
 
         img {
+            margin: auto 0;
             width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
+            max-width: 39.9rem;
+            height: 100%;
         }
     }
 
     .desc {
         margin: 2rem;
-        flex-grow: 1;
+        flex-basis: 50%;
 
         .partOne {
             @include desc;
@@ -32,7 +34,7 @@
         .border-contries {
             margin: 2rem 0;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             @include desc;
 
             ul {
@@ -40,6 +42,7 @@
                 flex-wrap: wrap;
                 //   width: 100%;
                 flex-basis: calc(100% - 15rem);
+                margin-left: .5rem;
 
                 li {
                     margin: .6rem 1rem;

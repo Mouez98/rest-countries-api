@@ -9,7 +9,7 @@ const Country = ({name,population,region, capital,flag}) => {
       <article className="country flex column">
         <img src={flag} alt="flag" />
         <div className="desc flex column left-flex">
-          <h3>{name}</h3>
+          <h3 title={name}>{name}</h3>
           <p>
             population: <span>{population}</span>
           </p>
