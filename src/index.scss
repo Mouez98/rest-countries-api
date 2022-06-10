@@ -19,6 +19,9 @@ body {
   overflow-x: hidden;
   transition: background-color .3s linear;
   background-color: $very-light-gray-bg;
+  &.dark {
+    background-color: $very-dark-blue-bg-dark;
+  }
 
 }
 

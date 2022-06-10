@@ -15,7 +15,6 @@ const SearchContainer = ({ searchHandler, data, regionHandler }) => {
 
   const selectedRegionHandler = e =>{ 
     const region = e.target.value;
-    console.log(region);
     regionHandler(region)
   }
 

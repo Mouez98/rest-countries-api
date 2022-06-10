@@ -5,6 +5,7 @@ import Countries from "../countries/Countries";
 import "./Home.scss";
 import useFetch from "../../hooks/use-fetch";
 import ErrorPage from "../error/ErrorPage";
+import Loading from "../ui/Loading";
 // import Loader from "css-loader";
 
 const Home = () => {
@@ -49,13 +50,13 @@ const Home = () => {
           searchHandler={countrySearchHandler}
           regionHandler={filterRegionsHandler}
         />
-        {isLoading ? (
-          <h3>Loading</h3>
-        ) : error ? (
+        {isLoading ? 
+          <Loading />
+         : error ? 
           <ErrorPage />
-        ) : (
+         : 
           <Countries data={fetchedData} />
-        )}
+        }
       </Container>
     </section>
   );

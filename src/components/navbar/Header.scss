@@ -9,10 +9,13 @@
     width: 100%;
     font-size: 1.6rem;
     margin-bottom: 4rem;
-
-    h2 {
+    a {
         color: inherit;
+        text-decoration: none;
     }
+    // h2 {
+    //     color: inherit;
+    // }
 
     .toggle-theme {
         cursor: pointer;

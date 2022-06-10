@@ -3,6 +3,7 @@ import Container from "../ui/Container";
 import { MdOutlineDarkMode, MdDarkMode } from "react-icons/md";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/theme-provider";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { toggleTheme, darkTheme } = useContext(ThemeContext);
@@ -10,10 +11,20 @@ const Header = () => {
   return (
     <header className="header ">
       <Container className="flex space-between center-flex">
-        <h2>Where in the world</h2>
+        <Link to="/">
+          <h2>Where in the world</h2>
+        </Link>
+
         <div className="toggle-theme flex" onClick={toggleTheme}>
-          {darkTheme ? <MdDarkMode /> : <MdOutlineDarkMode />}
-          {darkTheme ? <h4>Light Mode</h4> : <h4>Dark Mode</h4>}
+          {!darkTheme ? 
+            <>
+              <MdOutlineDarkMode /> <h4>Dark Mode</h4>
+            </>
+           : 
+            <>
+              <MdDarkMode /> <h4>Light Mode</h4>
+            </>
+          }
         </div>
       </Container>
     </header>
