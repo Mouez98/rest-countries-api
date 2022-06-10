@@ -1,12 +1,20 @@
 @import '../../styles/colors';
+// @use 'sass:math';
+$countries: 250;
+
+@for $i from 1 through $countries {
+    .country.delay#{$i} {
+      animation-delay:  #{$i / 10}s;
+    }
+}
 
 .country {
     box-shadow: $box-shadow;
     min-height: 25rem;
     border-radius: $border-raduis;
     transition: transform .3s ease-out;
-    // transform-style: preserve-3d;
-    // transform: translateZ(50px);
+    opacity: 0 ;
+    animation: fadeIn 1s forwards;
     &:hover {
         transform: perspective(50rem) translateZ(3rem);
     }

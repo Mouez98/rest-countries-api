@@ -13,7 +13,6 @@ const Home = () => {
 
   const { data, isLoading, error } = useFetch("https://restcountries.com/v2/all");
 
-
   const countrySearchHandler = (key) => {
     if (key.trim().length > 0) {
       const filtredData = data.filter((country) =>
@@ -46,14 +45,15 @@ const Home = () => {
     <section className="home">
       <Container>
         <SearchContainer
+          error={error}
           data={data}
           searchHandler={countrySearchHandler}
           regionHandler={filterRegionsHandler}
         />
         {isLoading ? 
           <Loading />
-         : error ? 
-          <ErrorPage />
+         : error  ? 
+         <ErrorPage />
          : 
           <Countries data={fetchedData} />
         }

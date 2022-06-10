@@ -24,7 +24,7 @@ const CountryDetails = () => {
   );
 
   useEffect(() => {
-    setFetchedData(data[0]);
+   data && setFetchedData(data[0]);
   }, [data, fetchedData]);
 
   return (
@@ -34,7 +34,7 @@ const CountryDetails = () => {
       </Button>
       {isLoading ? (
         <Loading />
-      ) : error ? (
+      ) : error && !isLoading && !fetchedData ? (
         <ErrorPage />
       ) : (
         fetchedData && (

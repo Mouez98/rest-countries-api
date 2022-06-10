@@ -12,7 +12,7 @@ const ErrorPage = () => {
         };
   return (
     <div className="error">
-      <Container className="flex">
+      <Container >
         <div className="svgContainer">
           <img src={Svg} alt="error" />
         </div>

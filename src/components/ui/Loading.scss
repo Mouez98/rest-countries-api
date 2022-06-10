@@ -96,6 +96,9 @@ $topenter: -10px;
   -webkit-animation: enter 6s infinite;
   animation: enter 6s infinite;
 }
+.dark .square {
+  background: $very-light-gray-bg;
+}
 .enter{
   top: 0px;
   opacity: 1;
@@ -105,6 +108,9 @@ $topenter: -10px;
 }
 .square:nth-child(2){
  @include delay(7 * $delayenter);
+}
+.dark .square:nth-child(3) {
+  background: #ccc;
 }
 .square:nth-child(3){
   @include delay(8 * $delayenter);

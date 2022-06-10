@@ -9,14 +9,17 @@ const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useLocalStorage("theme", "light");
   const isDarkTheme = theme === "dark";
  
+//Set body class from localStorage
   const body = document.body;
-  body.classList = theme;
+  theme && (body.classList = theme);
 
+  //Toggle theme 
   const toggleThemeHandler = () => {
    theme && setTheme( (prev)=> {
       return prev === 'light' ? 'dark': 'light';
     })
-    isDarkTheme ? body.classList = "dark" : body.classList.remove("dark");
+    //toggle class
+    isDarkTheme && body.classList.toggle('dark')
   };
 
   const contextProvider = {
@@ -26,7 +29,7 @@ const ThemeProvider = ({ children }) => {
 
   useEffect(()=> {
     setTheme(theme)
-  },[theme])
+  },[setTheme, theme])
 
   return (
     <ThemeContext.Provider value={contextProvider}>
