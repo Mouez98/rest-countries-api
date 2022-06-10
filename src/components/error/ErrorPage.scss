@@ -1,6 +1,7 @@
 @import '../../styles/mixin';
 
 .error {
+    animation: fadeIn 1s forwards;
     .container {
        display: grid;
        grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
