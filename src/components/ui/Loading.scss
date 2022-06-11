@@ -109,9 +109,6 @@ $topenter: -10px;
 .square:nth-child(2){
  @include delay(7 * $delayenter);
 }
-.dark .square:nth-child(3) {
-  background: #ccc;
-}
 .square:nth-child(3){
   @include delay(8 * $delayenter);
   background: #0c5858;

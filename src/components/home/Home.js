@@ -6,12 +6,16 @@ import "./Home.scss";
 import useFetch from "../../hooks/use-fetch";
 import ErrorPage from "../error/ErrorPage";
 import Loading from "../ui/Loading";
-// import Loader from "css-loader";
+import ScrollToTop from "./ScrollToTop";
+
+
 
 const Home = () => {
   const [fetchedData, setFetchedData] = useState([]);
 
-  const { data, isLoading, error } = useFetch("https://restcountries.com/v2/all");
+  const { data, isLoading, error } = useFetch(
+    "https://restcountries.com/v2/all"
+  );
 
   const countrySearchHandler = (key) => {
     if (key.trim().length > 0) {
@@ -24,18 +28,19 @@ const Home = () => {
     }
   };
 
-
   const filterRegionsHandler = (region) => {
     if (region === "all") {
       setFetchedData(data);
     } else {
-       const filtredData = data.filter((country) =>
-      country.region.toUpperCase().includes(region.toUpperCase())
-    );
-    setFetchedData(filtredData);
+      const filtredData = data.filter((country) =>
+        country.region.toUpperCase().includes(region.toUpperCase())
+      );
+      setFetchedData(filtredData);
     }
-   
   };
+
+ 
+    
 
   useEffect(() => {
     setFetchedData(data);
@@ -50,13 +55,14 @@ const Home = () => {
           searchHandler={countrySearchHandler}
           regionHandler={filterRegionsHandler}
         />
-        {isLoading ? 
+        {isLoading ? (
           <Loading />
-         : error  ? 
-         <ErrorPage />
-         : 
+        ) : error ? (
+          <ErrorPage />
+        ) : (
           <Countries data={fetchedData} />
-        }
+        )}
+        <ScrollToTop />
       </Container>
     </section>
   );

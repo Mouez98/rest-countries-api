@@ -1,6 +1,6 @@
 @import '../../styles/colors';
 // @use 'sass:math';
-$countries: 250;
+$countries: 20;
 
 @for $i from 1 through $countries {
     .country.delay#{$i} {
