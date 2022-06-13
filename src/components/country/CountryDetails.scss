@@ -7,7 +7,6 @@
         flex-basis: 50%;
         position: relative;
         max-height: 31.3rem;
-       
 
         img {
             margin: auto 0;
@@ -40,7 +39,6 @@
             ul {
                 display: flex;
                 flex-wrap: wrap;
-                //   width: 100%;
                 flex-basis: calc(100% - 15rem);
                 margin-left: .5rem;
 
@@ -85,9 +83,6 @@
 
             img {
                 width: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
             }
         }
 
